@@ -1,6 +1,8 @@
 This project contains programming exersises from book "Agile Web Development with Rails", 4th edition.
 *UPDATE 03.15.2012: added demo app from Chapter 2. To check it, start rails server from 'demo' folder.
 *UPDATE 03.19.2012: added depot app from Chapter 6. To check it, start rails server from 'depot' folder.
+*UPDATE 03.21.2012: added playtime from Chapter 7.
+*UPDATE 03.21.2012: added playtime from Chapter 8.
 
 NOTE: as it is seen from screenshots and ways to files, authors separate depot app into depot_a, depot_b e.t.c. I solve not to separate it and still don't suffer.
 NOTE: the book doesn't contain step "now download book covers and put it to blahblahblah". So my version of products/ page doesn't contain book covers.
