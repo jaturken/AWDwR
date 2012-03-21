@@ -23,8 +23,13 @@ class ProductsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
     assert_not_nil assigns(:products)
+    assert_select '.list_actions', 3 
   end
 
+  #test "should count number of products" do
+  #  assert_select 'a', minimum:3
+  #end
+  
   test "should get new" do
     get :new
     assert_response :success
@@ -61,7 +66,9 @@ class ProductsControllerTest < ActionController::TestCase
     assert_difference('Product.count', -1) do
       delete :destroy, id: @product.to_param
     end
-
+    
     assert_redirected_to products_path
   end
+  
+
 end
