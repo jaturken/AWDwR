@@ -1,5 +1,11 @@
 class StoreController < ApplicationController
   def index
+<<<<<<< HEAD
     @products = Product.order(:title)
   end
+=======
+    @product = Product.order(:title)
+  end
+  
+>>>>>>> origin/master
 end

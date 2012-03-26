@@ -4,3 +4,5 @@ require File.expand_path('../application', __FILE__)
 # Initialize the rails application
 Depot::Application.initialize!
 
+# Define Date format without date, time only
+Time::DATE_FORMATS[:time_only] = "%T"

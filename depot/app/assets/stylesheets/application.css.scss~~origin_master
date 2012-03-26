@@ -19,11 +19,7 @@
 
   img {
     float: left;
-<<<<<<< HEAD
-  }
-=======
     }
->>>>>>> origin/master
 }
 
 #notice {
@@ -62,13 +58,10 @@
         }
       }
     }
-<<<<<<< HEAD
-=======
     time {
-       color:#bfb;
+       color: #bfb
        font-size:small;
     }
->>>>>>> origin/master
   }
 }
 /* END_HIGHLIGHT */
