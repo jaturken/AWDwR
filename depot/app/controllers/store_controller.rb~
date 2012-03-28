@@ -1,11 +1,20 @@
 class StoreController < ApplicationController
   def index
-<<<<<<< HEAD
     @products = Product.order(:title)
-  end
-=======
-    @product = Product.order(:title)
+    @counter = visit_counter
   end
   
->>>>>>> origin/master
+  private 
+  
+  def visit_counter
+    if session[:counter].nil?
+      session[:counter]= 0
+    end
+    session[:counter] = session[:counter]+1
+    @session_counter = session[:counter]
+  end
+     
+      
+    
+  
 end
