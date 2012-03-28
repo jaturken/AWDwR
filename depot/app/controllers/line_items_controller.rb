@@ -41,6 +41,9 @@ class LineItemsController < ApplicationController
   # POST /line_items.json
   def create 
   
+    #Reset the counter to zero when product is added to cart
+    session[:counter] = 0
+    
     @cart = current_cart
     product = Product.find(params[:product_id])
     @line_item = @cart.line_items.build(product: product)
