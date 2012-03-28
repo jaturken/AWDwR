@@ -11,7 +11,6 @@ class StoreController < ApplicationController
       session[:counter]= 0
     end
     session[:counter] = session[:counter]+1
-    @session_counter = session[:counter]
   end
      
       
