@@ -12,6 +12,15 @@
     border-bottom: 3px dotted #77d;
   }
 
+  /* Counter*/
+  .counter {
+    margin: 0 40% 0 40%;
+    width: 20%;
+    padding-bottom: 0.5em;
+    font:  100% sans-serif;
+    color: blue;
+  }
+  
   /* An entry in the store catalog */
   .entry {
     overflow: auto;

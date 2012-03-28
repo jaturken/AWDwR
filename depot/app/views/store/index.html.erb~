@@ -1,3 +1,4 @@
+<div class = "session_counter">This is your <%= @counter %> visit.</div>
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
@@ -14,5 +15,5 @@
       <%= button_to 'Add to Cart', line_items_path(product_id: product) %>
     </div>
   </div>
-  <div class = "session_counter">This is your <%= @counter => visit.</div>
+
 <% end %>

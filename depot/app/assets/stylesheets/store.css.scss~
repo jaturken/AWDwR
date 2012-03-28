@@ -12,6 +12,15 @@
     border-bottom: 3px dotted #77d;
   }
 
+  /* Counter*/
+  .counter {
+    margin: 0 10% 0 10%;
+    width: 80%;
+    padding-bottom: 0.5em;
+    font:  100% sans-serif;
+    color: blue;
+  }
+  
   /* An entry in the store catalog */
   .entry {
     overflow: auto;
@@ -35,7 +44,6 @@
       color: #227;
     }
 
-//#START:inline
     p, div.price_line {
       margin-left: 100px;
       margin-top: 0.5em; 
@@ -45,7 +53,6 @@
         display: inline;
       }
     }
-//#END:inline
 
     .price {
       color: #44a;
