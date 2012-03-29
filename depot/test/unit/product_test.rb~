@@ -70,7 +70,7 @@ class ProductTest < ActiveSupport::TestCase
                  product.errors[:title].join('; ')
   end
 
-  test "product's name can be dublicated"
+  test "product's name can be dublicated" do
         product = Product.new(title:       products(:ruby).title,
                           description: "yyy", 
                           price:       1, 
