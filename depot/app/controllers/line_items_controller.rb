@@ -82,12 +82,14 @@ class LineItemsController < ApplicationController
   # DELETE /line_items/1
   # DELETE /line_items/1.json
   def destroy
-    @line_item = LineItem.find(params[:id])
-    @line_item.destroy
-
+        @line_item = LineItem.find(params[:id])
     respond_to do |format|
-      format.html { redirect_to line_items_url }
+      format.html { redirect_to  @line_item.cart}
       format.json { head :ok }
     end
+
+    @line_item.destroy
+
   end
+
 end
