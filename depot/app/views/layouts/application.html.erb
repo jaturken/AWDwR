@@ -10,19 +10,18 @@
 </head>
 <!-- END:head -->
 <body class="<%= controller.controller_name %>">
-  <div id="banner">
-    <%= image_tag("logo.png") %>
-    <%= @page_title || "Pragmatic Bookshelf" %>
-  </div>
-  <div id="columns">
-    <div id="side">
-<!-- START_HIGHLIGHT -->
-      <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
-        <%= render @cart %>
-        <% end %>
+   <div id="banner">
+      <%= image_tag("logo.png") %>
+       <%= @page_title || "Pragmatic Bookshelf" %>
+   </div>
+   <div id="columns">
+      <div id="side">
+	 <% if @cart %>
+	    <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+	    <%= render @cart %>
+	    <% end %>
+	 <% end %>
       </div>
-
-<!-- END_HIGHLIGHT -->
       <ul>
         <li><a href="http://www....">Home</a></li>
         <li><a href="http://www..../faq">Questions</a></li>
