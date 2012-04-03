@@ -10,7 +10,7 @@ class StoreController < ApplicationController
     if session[:counter].nil?
       session[:counter]= 0
     end
-    session[:counter] = session[:counter]+1
+    session[:counter] += 1
   end
      
       

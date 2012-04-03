@@ -51,8 +51,7 @@ class LineItemsController < ApplicationController
     respond_to do |format|
 	
       if @line_item.save
-        format.html { redirect_to @line_item.cart }
-		  
+        format.html { redirect_to store_url }		  
         format.json { render json: @line_item,
           status: :created, location: @line_item }
       else
@@ -84,7 +83,7 @@ class LineItemsController < ApplicationController
   def destroy
         @line_item = LineItem.find(params[:id])
     respond_to do |format|
-      format.html { redirect_to  @line_item.cart}
+      format.html { redirect_to  store_url}
       format.json { head :ok }
     end
 

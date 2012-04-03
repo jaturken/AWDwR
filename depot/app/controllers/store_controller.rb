@@ -2,6 +2,7 @@ class StoreController < ApplicationController
   def index
     @products = Product.order(:title)
     @counter = visit_counter
+    @cart = current_cart
   end
   
   private 
