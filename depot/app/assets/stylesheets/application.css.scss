@@ -33,7 +33,9 @@
 
 #columns {
   background: #141;
-
+  float: left;
+  min-height: 100%;
+  
   #main {
     margin-left: 21em;
     padding: 1em;
@@ -41,11 +43,11 @@
   }
 
   #side {
-    float: left;
     padding: 1em 2em;
-    width: 16em;
+    width: 21em;
     background: #141;
-   
+    
+    
     form, div {
        display: inline;
     }  
