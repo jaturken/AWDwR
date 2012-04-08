@@ -82,6 +82,7 @@ class LineItemsController < ApplicationController
   # DELETE /line_items/1
   # DELETE /line_items/1.json
   def destroy
+    print "Destroyed"
     @line_item = LineItem.find(params[:id])
     respond_to do |format|
       format.html { redirect_to  store_url}
@@ -91,15 +92,17 @@ class LineItemsController < ApplicationController
   end
 
   def decrement
+    @cart = current_cart
     @line_item =  LineItem.find(params[:id])
     if @line_item.quantity >1
-      @line_item.quantity = @line_item.quantity - 1
-    else
+      @line_item.update_attribute(:quantity, @line_item.quantity-1)
+    else      
       @line_item.destroy
     end
 
     respond_to do |format|
       format.html { redirect_to  store_url}
+      format.js { @current_item = @line_item }
       format.json { head :ok }
     end
   end
