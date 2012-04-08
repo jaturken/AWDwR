@@ -81,25 +81,27 @@ class LineItemsController < ApplicationController
 
   # DELETE /line_items/1
   # DELETE /line_items/1.json
-   def destroy
-      @line_item = LineItem.find(params[:id])
-      respond_to do |format|
-	 format.html { redirect_to  store_url}
-	 format.json { head :ok }
-       end
+  def destroy
+    @line_item = LineItem.find(params[:id])
+    respond_to do |format|
+      format.html { redirect_to  store_url}
+      format.json { head :ok }
+    end
     @line_item.destroy
-   end
+  end
 
-   def decrement
-      @line_item =  LineItem.find(params[:id])
-      if @line_item.quantity >1
-	 @line_item.quantity -= 1
-      else
-	 @line_item.destroy
-      end
-      respond_to do |format|
-	 format.html { redirect_to  store_url}
-	 format.json { head :ok }
-      end
-   end
+  def decrement
+    @line_item =  LineItem.find(params[:id])
+    if @line_item.quantity >1
+      @line_item.quantity = @line_item.quantity - 1
+    else
+      @line_item.destroy
+    end
+
+    respond_to do |format|
+      format.html { redirect_to  store_url}
+      format.json { head :ok }
+    end
+  end
+  
 end
