@@ -86,7 +86,7 @@ class OrdersController < ApplicationController
     @order.destroy
 
     respond_to do |format|
-      format.html { redirect_to orders_url }
+      format.html { redirect_to store_url }
       format.json { head :no_content }
     end
   end

@@ -7,7 +7,7 @@ class OrdersControllerTest < ActionController::TestCase
 
   test "requires items in cart" do
      get :new
-     assert_redirect_to store_path
+     assert_redirected_to store_path
      assert_equal flash[:notice], 'Your cart is empty' 
   end
   
@@ -31,7 +31,7 @@ class OrdersControllerTest < ActionController::TestCase
       post :create, order: @order.attributes
     end
 
-    assert_redirected_to order_path(assigns(:order))
+    assert_redirected_to store_path
   end
 
   test "should show order" do
