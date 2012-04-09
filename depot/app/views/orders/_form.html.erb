@@ -1,0 +1,15 @@
+<%= semantic_form_for @order do |f| %>
+	<%= f.inputs do %>
+    <%= f.input :name,	:input_html => { size: 40 } %>
+    <%= f.input :address,	:input_html => { rows: 3, cols: 32  } %>
+    <%= f.input :email,	:input_html => { size: 40 }  %>
+    <%= f.input :pay_type,
+    	:as => :select, :collection => Order::PAYMENT_TYPES,
+    	include_blank: false
+		%>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>
