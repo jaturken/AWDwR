@@ -1,20 +1,6 @@
-#---
-# Excerpted from "Agile Web Development with Rails",
-# published by The Pragmatic Bookshelf.
-# Copyrights apply to this code. It may not be used to create training material, 
-# courses, books, articles, and the like. Contact us if you are in doubt.
-# We make no guarantees that this code is fit for any purpose. 
-# Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
-#---
-#---
-# Excerpted from "Agile Web Development with Rails, 4rd Ed.",
-# published by The Pragmatic Bookshelf.
-# Copyrights apply to this code. It may not be used to create training material, 
-# courses, books, articles, and the like. Contact us if you are in doubt.
-# We make no guarantees that this code is fit for any purpose. 
-# Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
-#---
 # encoding: utf-8
+
+# PRODUCTS
 Product.delete_all
 Product.create(:title => 'Web Design for Developers',
   :description => 
@@ -53,3 +39,9 @@ Product.create(:title => 'Rails Test Prescriptions',
       </p>},
   :image_url => '/assets/rtp.jpg',
   :price => 43.75)
+
+#PAYMENT_TYPES
+PaymentType.delete_all
+PaymentType.create(:name => "Check")
+PaymentType.create(:name => "Credit card")
+PaymentType.create(:name => "Purchase order")
