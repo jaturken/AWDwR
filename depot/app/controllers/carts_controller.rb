@@ -17,7 +17,7 @@ def show
       @cart = Cart.find(params[:id])
     rescue ActiveRecord::RecordNotFound => e
       logger.error "Attempt to access invalid cart #{params[:id]}"
-      Notifier.error_occured(e).deliver
+      FaulureNotifier.error_occured(e).deliver
       redirect_to store_url, notice: 'Invalid cart'
     else
       respond_to do |format|

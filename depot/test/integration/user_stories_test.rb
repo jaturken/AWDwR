@@ -7,6 +7,8 @@ class UserStoriesTest < ActionDispatch::IntegrationTest
   # cart, and check out, filling in their details on the checkout form. When
   # they submit, an order is created containing their information, along with a
   # single line item corresponding to the product they added to their cart.
+  # User receives mail with order receiving confirmation. Then order is marked as
+  # shipped. User receives mail with order shipping confirmation.
   
   test "buying a product" do
     LineItem.delete_all
@@ -55,5 +57,13 @@ class UserStoriesTest < ActionDispatch::IntegrationTest
     assert_equal ["dave@example.com"], mail.to
     assert_equal 'Alex Teut <jaturken@gmail.com>', mail[:from].value
     assert_equal "Pragmatic Store Order Confirmation", mail.subject
+
+    Order.update(order.id, ship_date: Time.now)
+    put "/orders/"+order.id.to_s # call update from orders_controller
+    
+    mail = ActionMailer::Base.deliveries.last
+    #assert_equal ["dave@example.com"], mail.to
+    #assert_equal 'Alex Teut <jaturken@gmail.com>', mail[:from].value
+    assert_equal 'Pragmatic Store Order Shipped', mail.subject 
   end
 end
