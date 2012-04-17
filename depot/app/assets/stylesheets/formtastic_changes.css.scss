@@ -1,4 +1,4 @@
-.depot_form {
+.input_form {
   fieldset {
     background: #efe;
     legend {
@@ -21,6 +21,7 @@
 
     select, textarea, input {
       margin-left: 0.5em;
+      size: 40;
     }
 
     .submit {
@@ -38,3 +39,5 @@ form.formtastic fieldset ol li p.inline-hints {
   font-style: italic;
   font-size: 11px;
 }
+
+/* Register new user form */

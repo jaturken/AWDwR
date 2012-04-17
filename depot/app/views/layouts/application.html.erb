@@ -15,6 +15,15 @@
 
   <div id="columns">
 
+    <div id="user_nav">
+      <% if user_signed_in? %>
+        Signed in as <%= current_user.email %>. Not you?
+        <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+      <% else %>
+      <%= link_to "Sign in", new_user_session_path %> <br /> <%= link_to "Register", new_user_registration_path %> 
+      <% end %>
+    </div>
+
     <div id="side">
       <% if @cart %>
         <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
