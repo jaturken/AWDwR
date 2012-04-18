@@ -1,0 +1,36 @@
+ru:
+#START:layout
+  layouts:
+    application:
+      title:       "Книжная полка"
+      home:        "Домой"
+      products:			"Продукты"
+      orders:				"Заказы"
+      carts:				"Корзины"
+#END:layout
+
+#START:main
+  store:
+    index:
+      title_html:  "Ваш каталог"
+      add_html:    "Добавить в корзину"
+#END:main
+
+#START:cart
+  carts:
+    cart:
+      title:       "Корзина"
+      empty:       "Очистить корзину"
+      checkout:    "Оформить заказ"
+#END:cart
+
+#START:currency
+  number:
+    currency:
+      format:
+        unit:      "$"
+        precision: 2
+        separator: "."
+        delimiter: " "
+        format:    "%u%n"
+#END:currency

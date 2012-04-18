@@ -1,0 +1,36 @@
+es:
+#START:layout
+  layouts:
+    application:
+      title:       "Publicaciones de Pragmatic"
+      home:        "Inicio"
+      products:			"Productos"
+      orders:				"Órdenes"
+      carts:				"Carritos"
+#END:layout
+
+#START:main
+  store:
+    index:
+      title_html:  "Su Cat&aacute;logo de Pragmatic"
+      add_html:    "A&ntilde;adir al Carrito"
+#END:main
+
+#START:cart
+  carts:
+    cart:
+      title:       "Carrito de la Compra"
+      empty:       "Vaciar Carrito"
+      checkout:    "Comprar"
+#END:cart
+
+#START:currency
+  number:
+    currency:
+      format:
+        unit:      "$US"
+        precision: 2
+        separator: ","
+        delimiter: "."
+        format:    "%n&nbsp;%u"
+#END:currency
