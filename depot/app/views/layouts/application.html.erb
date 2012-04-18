@@ -11,19 +11,19 @@
   <div id="banner">
     <%= image_tag("logo.png") %>
     <%= @page_title || "Pragmatic Bookshelf" %>
-  </div>
-
-  <div id="columns">
 
     <div id="user_nav">
       <% if user_signed_in? %>
-        Signed in as <%= current_user.email %>. Not you?
+        Signed in as <%= current_user.name %>.
         <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
       <% else %>
       <%= link_to "Sign in", new_user_session_path %> <br /> <%= link_to "Register", new_user_registration_path %> 
       <% end %>
     </div>
 
+  </div>
+
+  <div id="columns">
     <div id="side">
       <% if @cart %>
         <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
@@ -33,10 +33,10 @@
     </div>
 
     <ul>
-      <li><a href="http://www....">Home</a></li>
-      <li><a href="http://www..../faq">Questions</a></li>
-      <li><a href="http://www..../news">News</a></li>
-      <li><a href="http://www..../contact">Contact</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/orders">Orders</a></li>
+      <li><a href="/carts">Carts</a></li>
     </ul>
 
   </div>

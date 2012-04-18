@@ -1,12 +1,6 @@
-<h2>Sign in</h2>
-
-<%= semantic_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-	<%= f.inputs  do%>
-		<%= f.input :email , as: :email%>
-		<%= f.input :password %>
-		<%= f.input :remember_me, as: :boolean %>
-	<% end %>
-	<%= f.actions %>
-<% end %>
-
-<%= render "links" %>
+<div class = "input_form">
+	<fieldset>
+		<legend>Sign in</legend>
+		<%= render 'form' %>
+	</fieldset>
+</div>

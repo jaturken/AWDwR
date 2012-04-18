@@ -7,7 +7,9 @@
 		<%= f.input :password, as: :password, :input_html => { size: 40 }%>
 		<%= f.input :password_confirmation, as: :password, :input_html => { size: 40 } %>
 	<% end %>
-	<%= f.actions %>
+	<%= f.actions do%>
+	<%= f.action :submit, label: "Register"%>
+	<% end %>
 <% end %>
 
 <%= render "links" %>

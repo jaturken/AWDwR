@@ -45,3 +45,16 @@ PaymentType.delete_all
 PaymentType.create(:name => "Check")
 PaymentType.create(:name => "Credit card")
 PaymentType.create(:name => "Purchase order")
+
+#USERS
+User.delete_all
+User.create(  name: "Alex Teut", 
+              email: "jaturken@gmail.com",
+              password: "jaturken",
+              password_confirmation: "jaturken",
+              role: "admin")
+
+User.create(  name: "User", 
+              email: "user@gmail.com",
+              password: "useruser",
+              password_confirmation: "useruser")
