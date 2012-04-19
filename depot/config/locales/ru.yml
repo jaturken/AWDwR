@@ -1,5 +1,5 @@
 ru:
-#START:layout
+
   layouts:
     application:
       title:       "Книжная полка"
@@ -7,24 +7,22 @@ ru:
       products:			"Продукты"
       orders:				"Заказы"
       carts:				"Корзины"
-#END:layout
 
-#START:main
   store:
     index:
       title_html:  "Ваш каталог"
       add_html:    "Добавить в корзину"
-#END:main
 
-#START:cart
   carts:
     cart:
       title:       "Корзина"
       empty:       "Очистить корзину"
       checkout:    "Оформить заказ"
-#END:cart
 
-#START:currency
+  line_items:
+    line_item:
+      decrement: "Удалить"
+
   number:
     currency:
       format:
@@ -33,4 +31,49 @@ ru:
         separator: "."
         delimiter: " "
         format:    "%u%n"
-#END:currency
+
+  orders:
+    new:
+      legend:       "Оформление заказа"
+    form:
+      pay_hint_html: "Выберите метод оплаты"
+
+  formtastic:
+    titles:
+    labels:
+      order:
+        name: "Имя"
+        address: "Адрес"
+        email: "Email"
+        pay_type_id: "Метод оплаты"
+    hints:
+      order:
+        form:
+          pay_hint_html: "Выберите метод оплаты"
+    placeholders:
+    actions:
+      order:
+        create: "Заказать"
+
+  activerecord:
+    errors:
+      models:
+        order:
+          attributes:
+            name:
+              blank: "не может быть пустым"
+            address:
+              blank: "не может быть пустым"
+            email:
+              blank: "не может быть пустым"
+      messages:
+        inclusion: "не из списка"
+        blank:     "не может быть пустым"
+
+  errors:
+    template:
+      header:
+        one:       "1 ошибка"
+        other:     "%{count} ошибки"
+
+  thanks_for_order: "Спасибо за ваш заказ"

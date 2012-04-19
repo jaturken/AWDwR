@@ -7,22 +7,21 @@ en:
       orders:				"Orders"
       carts:				"Carts"
 
-#START:main
   store:
     index:
       title_html:  "Your Pragmatic Catalog"
       add_html:    "Add to Cart"
-#END:main
 
-#START:cart
   carts:
     cart:
       title:       "Your Cart"
       empty:       "Empty cart"
       checkout:    "Checkout"
-#END:cart
 
-#START:currency
+  line_items:
+    line_item:
+      decrement: "Decrement"
+
   number:
     currency:
       format:
@@ -31,4 +30,43 @@ en:
         separator: "."
         delimiter: ","
         format:    "%u%n"
-#END:currency
+
+  orders:
+    new:
+      legend:       "Please Enter Your Details"
+    form:
+      pay_hint_html: "Select a payment method"
+
+  formtastic:
+    titles:
+    labels:
+      order:
+        name: "Name"
+        address: "Address"
+        email: "Email"
+        pay_type_id: "Payment type"
+    hints:
+    placeholders:
+    actions:
+      order:
+        create: "Create"
+
+  activerecord:
+    errors:
+      models:
+        order:
+          attributes:
+            name:
+              blank: "can't be blank"
+            address:
+              blank: "can't be blank"
+            email:
+              blank: "can't be blank"
+
+  errors:
+    template:
+      header:
+        one:       "1 error prevent to save %{model}"
+        other:     "%{count} errors prevents to save %{model}"
+
+  thanks_for_order: "Thanks for your order"
