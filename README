@@ -1,7 +1,19 @@
 This project contains programming exersises from book "Agile Web Development
 with Rails", 4th edition. 
 
+Used 3rd-party gems:
+- formtastic
+- devise
+- cancan
+- will-paginate
+- rspec - not yet
+- dragonfly - not yet
+- nested_set - not yet
+- jrails - not yet
+- kaminari - not yet
+- meta_search - not yet
+- meta_where - not yet
+
 NOTE: as it is seen from screenshots and ways to files, authors separate depot
 app into depot_a, depot_b e.t.c. I solve not to separate it and still don't
 suffer.
-
