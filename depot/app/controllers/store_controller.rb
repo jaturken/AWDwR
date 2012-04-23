@@ -3,7 +3,7 @@ class StoreController < ApplicationController
     if params[:set_locale]
       redirect_to store_path(locale: params[:set_locale])
     else
-      @products = Product.order(:title)
+      @products = Product.find_products_for_sale
       @counter = visit_counter
       @cart = current_cart
     end
