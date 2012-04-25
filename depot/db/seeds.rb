@@ -132,9 +132,17 @@ Product.create(:title => 'Рецепты тестирования в Rails',
 
 #PAYMENT_TYPES
 PaymentType.delete_all
-PaymentType.create(:name => "Check")
-PaymentType.create(:name => "Credit card")
-PaymentType.create(:name => "Purchase order")
+PaymentType.create(:name => "Check", locale: "en")
+PaymentType.create(:name => "Credit card", locale: "en")
+PaymentType.create(:name => "Purchase order", locale: "en")
+
+PaymentType.create(:name => "Jaque", locale: "es")
+PaymentType.create(:name => "Tarjeta de crédito", locale: "es")
+PaymentType.create(:name => "Order de compra", locale: "es")
+
+PaymentType.create(:name => "Чек", locale: "ru")
+PaymentType.create(:name => "Кредитная карта", locale: "ru")
+PaymentType.create(:name => "Наличные", locale: "ru")
 
 #USERS
 User.delete_all

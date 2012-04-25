@@ -18,7 +18,7 @@
     <%= f.input :address,	:input_html => { rows: 3, cols: 32  } %>
     <%= f.input :email,	:input_html => { size: 40 }  %>
     <%= f.input :pay_type_id,
-    	:as => :select, collection: PaymentType.all.collect {|x| [x.name, x.id]},
+    	:as => :select, collection: PaymentType.where(["locale = ?", I18n.locale]).all.collect {|x| [x.name, x.id]},
     	include_blank: false, :hint => t('.pay_hint_html')
 		%>
   <% end %>
