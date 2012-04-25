@@ -6,6 +6,7 @@ class StoreController < ApplicationController
       @products = Product.find_products_for_sale
       @counter = visit_counter
       @cart = current_cart
+      @exchange_rate = ExchangeRate.find_by_locale(I18n.locale)
     end
   end
   

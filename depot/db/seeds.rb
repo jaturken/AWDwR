@@ -148,3 +148,9 @@ User.create(  name: "User",
               email: "user@gmail.com",
               password: "useruser",
               password_confirmation: "useruser")
+
+#EXCHANGE_RATES
+ExchangeRate.delete_all
+ExchangeRate.create(name: "dollar", rate: 1, locale: "en", sign: "$")
+ExchangeRate.create(name: "euro", rate: 1.4, locale: "es", sign: "€")
+ExchangeRate.create!(name: "rouble", rate: 0.000125, locale: "ru", sign: "р")
