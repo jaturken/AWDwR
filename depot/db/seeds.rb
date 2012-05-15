@@ -146,13 +146,12 @@ PaymentType.create(:name => "Наличные", locale: "ru")
 
 #USERS
 User.delete_all
-User.create!(  name: "Alex Teut", 
+@admin = User.create!(  name: "Alex Teut", 
               email: "jaturken@gmail.com",
               password: "jaturken",
               password_confirmation: "jaturken"
               )
 #role cannot be mass-assigned, so all non-default values creates in this way:
-@admin = User.find_by_name("Alex Teut")
 @admin.role = "admin"
 @admin.save!
 
