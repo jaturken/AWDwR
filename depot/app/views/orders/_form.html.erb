@@ -1,18 +1,5 @@
 <%= semantic_form_for @order do |f| %>
   
-  <% if @order.errors.any? %>
-    <div id="error_explanation">
-      <h2><%=raw t('errors.template.header', count: @order.errors.count,
-        model: t('activerecord.models.order')) %>.</h2>
-
-      <ul>
-      <% @order.errors.full_messages.each do |msg| %>
-        <li><%=raw msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
 	<%= f.inputs do %>
     <%= f.input :name,	:input_html => { size: 40 } %>
     <%= f.input :address,	:input_html => { rows: 3, cols: 32  } %>
