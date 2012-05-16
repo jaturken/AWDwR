@@ -146,7 +146,7 @@ PaymentType.create(:name => "Наличные", locale: "ru")
 
 #USERS
 User.delete_all
-@admin = User.create!(  name: "Alex Teut", 
+@admin = User.new(  name: "Alex Teut", 
               email: "jaturken@gmail.com",
               password: "jaturken",
               password_confirmation: "jaturken"
